@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---------------------font awesome--------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!---------------------site fonts--------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <!---------------------css style--------------------->
+    <link rel="stylesheet" href="css/all.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="inner position-relative pb-2 mb-3">
+            <h1 class="text-capitalize position-relative mb-4 text-center mt-5 start-50 translate-middle-x">bookmarker</h1>
+        </div>
+        <div class="inner1 px-3 py-4 position-relative">
+            <h2 class="text-center mt-2 mb-5">
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <p class="mb-0 pb-2"> 
+            <i class="fa-solid fa-book-bookmark pe-2"></i>
+                Site Name
+            </p>
+                <input id="sName" oninput="validateName()" type="text" class="form-control mb-4" placeholder="Bookmark Name">
+                <p class="alert alert-danger d-none" id="sNameInvalid">The website name must contain between 3 and 30 characters only, with no special symbols.</p>
+            <p class="mb-0 pb-2">
+            <i class="fa-solid fa-link pe-2"></i>
+                Site URL
+            </p>
+                <input id="sUrl" oninput="validateUrl()" type="text" class="form-control" placeholder="Website URL">
+                <p class="alert alert-danger d-none" id="sUrlInvalid"></p>
+            <button id="submit" onclick="addUrl()" class="btn px-5 position-relative mt-4">Submit</button>
+        </div>
+        <table id="rowDisplay" class="table text-center mt-4">
+        </table>
+    </div>
+    
+
+    <script src="JS/bootstrap.bundle.js"></script>
+    <script src="JS/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+body{
+    background-color: var(--bg-color);
+}
+
+::selection{
+    background-color: #fec260;
+    color: #352e28;
+}
+
+:root{
+    --Pacifico:"Pacifico", sans-serif;
+    --Righteous:"Righteous", sans-serif;
+    --PT_Sans_Caption: "PT Sans Caption", sans-serif;
+    --title-color: #352e28;
+    --bg-color: #f8ecde;
+    --button-color: #d1512c;
+    --black-color: #22252a;
+    --gold-color: #f9c55f;
+}
+
+h1{
+    font-family: var(--Pacifico);
+    font-weight: 500;
+    font-size: 50px;
+    color: var(--title-color);
+    width: fit-content;
+}
+
+h1::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 5px;
+    background-color: #fec260;
+    z-index: -1;
+    width:100%;
+    transition: all ease-in-out 0.3s;
+}
+
+h1:hover::before{
+    height: 60%;
+}
+
+.inner::after{
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    border-style: dotted;
+    border-bottom: 1px;
+    width: 100%;
+}
+
+
+h2{
+    font-family: var(--Righteous);
+    font-weight: 500;
+    font-size: 25px;
+    background: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p{
+    font-family: var(--PT_Sans_Caption);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--black-color);
+}
+
+input:focus {
+    box-shadow: 0 0 0 0.25rem #fec26055  !important;
+    border-color: #d99c39 !important;
+    outline: 0;
+}
+
+input.is-valid:focus {
+    box-shadow: 0 0 0 0.25rem #19875455 !important;
+    border-color: #198754 !important; 
+}
+
+input.is-invalid:focus {
+    box-shadow: 0 0 0 0.25rem #dc354555 !important;
+    border-color: #dc3545 !important;
+}
+
+.inner1 button{
+    font-family: var(--PT_Sans_Caption);
+    background-color: var(--button-color) !important;
+    color: white !important;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.inner1::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-style: dotted;
+    border-bottom: 1px;
+    width: 100%;
+}
+
+table{
+    font-family: var(--PT_Sans_Caption);
+    vertical-align:middle !important;
+}
